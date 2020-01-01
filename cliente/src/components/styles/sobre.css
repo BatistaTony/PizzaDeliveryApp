@@ -1,0 +1,41 @@
+
+.sobrenos {
+    float: left;
+    padding: 5%;
+}
+
+.sobrenos h1 {
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.sobrenos ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sobrenos ul li {
+    padding: 10px;
+    margin-left: 3%;
+}
+
+.sobrenos ul li  .title {
+    font-size: 15pt;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.sobrenos ul li .texto {
+    text-align: justify;
+}
+
+@media (max-width:900px){
+    .sobrenos ul {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,247 @@
+@font-face {
+    font-family: Raleway-semibold;
+    src:url(./fonts/raleway/Raleway-SemiBold.ttf);
+}
+
+.notif_body {
+    float: left;
+    width: 88.1%;
+    height: 93.6vh;
+    background: white;
+    margin-left:11.8%;
+    margin-top:3.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15%;
+}
+
+.notif_body .div_content_enc {
+    width: 95%;
+    margin-top: 4%;
+}
+
+.notif_body .nota_title {
+    margin-top: 2.5%;
+    font-family: Raleway-semibold;
+    text-align: left;
+    color:rgb(15, 14, 14);
+    font-size: 14pt;
+    width: 84%;
+    margin-bottom: 5%;
+    color:gray;
+    background-color: transparent;
+    position: fixed;
+    font-family: Raleway-semibold;
+}
+
+.notif_body .nota {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top:3%;
+    width: 100%; 
+    padding-top: 5px;
+    background:rgb(238, 230, 230);
+    padding-bottom: 0.8%;
+    align-items: center;
+    font-family: Raleway-semibold;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+
+.img_nota {
+    float: left;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-left: 10px;
+    align-items: flex-start;
+    border-color: rgba(255, 145, 0, 0.945);
+    border-style: solid;
+}
+
+.nota_2 {
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    width: 100%;   
+    
+}
+
+.nota .perfil_nota {
+    margin-top:-25px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    float: left;
+    margin-bottom: 1%;
+
+}
+
+.perfil_nota div {
+    margin-left:2%;
+    margin-top:10px;
+    float: left;
+}
+
+
+.perfil_nota h1 {
+    font-size: 14pt;
+    font-family: Raleway-semibold;
+    margin-bottom: 5px;
+}
+
+.perfil_nota h3 {
+    font-size: 10pt;
+    color:grey;
+}
+
+.perfil_nota h4 {
+    margin-top:5%;
+    font-size: 11pt;
+    color:grey;
+}
+
+ .time_nota {
+     margin-top: 10px;
+    top: 0%;
+    margin-right: 10px;
+    color:gray;
+    font-size: 9pt;
+    float: right;
+}
+
+
+.nota_2 .content_nota {
+    margin-top: 0;
+    width: 100%;
+    height: 100px auto;
+    display: none;
+    transition: 0.9s;
+
+}
+
+.content_nota .title {
+    font-size: 14pt;
+}
+
+.content_nota .title img {
+    width: 30px;
+    height: 30px;
+}
+
+.content_nota .tableData tr td:nth-child(5), 
+.content_nota .tableHead tr th:nth-child(5){
+    width: 130px;
+}
+
+.content_nota .tableData .acrescimo {
+    width: 500px;
+    font-size: 10pt;
+    text-align: left;
+    float: left;
+}
+
+.footer_nota {
+    width: 100%;
+    height: 50px;
+    margin-bottom: -10px;
+    float: left;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(145, 118, 118);
+}
+
+.footer_nota .nota_opc {
+    float: left;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 400px;
+    margin-top:10px;
+}
+
+.footer_nota .nota_opc button {
+    width: 100px;
+    height: 30px;
+    color:white;
+    border:hidden;
+    border-radius: 5px;
+    font-family: Raleway-semibold;
+    font-size: 10pt;
+    background:rgba(255, 145, 0, 0.945);
+    transition: 0.5s;
+}
+
+.footer_nota .nota_opc button:last-child {
+    background: red;
+}
+
+.ver_nota {
+    right: 0;
+    float: right;
+    justify-content: flex-end;
+    margin-right:10px;
+    margin-top:10px;
+    width: 100px;
+    height: 30px;
+    color:white;
+    border:hidden;
+    border-radius: 5px;
+    font-family: Raleway-semibold;
+    font-size: 10pt;
+    background:rgba(255, 145, 0, 0.945);
+    transition: 0.5s;
+}
+
+.ver_nota:hover,  .nota_opc button:hover     {
+    opacity: 0.7;
+}
+
+.overlay_abrir, .overlay_confirm{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    float: left;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    z-index: 99;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dialogAbrir, .dialogConfirm {
+    float: left;
+    position: absolute;
+    padding: 3%;
+    background:white;
+    border-radius:5px;
+}
+
+.dialogAbrir h1, .dialogConfirm  h1 {
+    font-size: 14pt;
+}
+
+.dialogAbrir button, .dialogConfirm button{
+    margin-top:20px;
+    margin-right:2%;
+    border-radius:5px;
+    border:hidden;
+    width: 130px;
+    float: right;
+    height: 30px;
+    background:rgba(255, 145, 0, 0.945);
+    color:white;
+    font-family: Raleway-semibold;
+    transition: 0.4s;
+}
+
+.dialogAbrir button:hover, .dialogConfirm button:hover {
+    opacity: 0.7;
+}

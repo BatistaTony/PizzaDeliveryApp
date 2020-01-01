@@ -1,0 +1,130 @@
+
+
+.div_login {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    background: url('/img/bgconta.png') no-repeat;
+    min-height: calc(70vh - 60px);
+    background-size: cover;
+}
+
+.div_login form h1 {
+    width: 300px;
+    text-align: center;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.erro_style {
+    width: 450px;
+    text-align: center;
+    margin-bottom:4%;
+    padding: 5px;
+
+}
+
+@media (max-width: 700px){
+    .erro_style {
+        width: 200px;
+    }
+
+    .erro_style h4 {
+        font-size: 10pt;
+    }
+}
+
+.erro_style h4 {
+    background: red;
+    padding: 5px;
+    width: 100px auto;
+    border-radius: 5px;
+    color: white;
+}
+
+.div_login form{
+    width: 450px;
+    margin-top:4%; 
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 700px){
+    .div_login form {
+        margin-top: 10%;
+        height: 350px;
+        width: 300px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .div_login .cadastro_form {
+        float: left;
+        height: auto;
+    }
+}
+
+
+.div_login form .ipt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 10px;  
+} 
+
+.div_login form label {
+    float: left;
+    color: white;   
+    margin-bottom: 10px;
+    font-size: 11pt;
+    margin-top:10px;
+}
+
+
+.div_login form input {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    border:hidden;
+    padding:3px;
+
+}
+
+.div_btns {
+    width: 430px;
+    display: flex;
+    margin-left: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+@media (max-width:700px) {
+    .div_btns {
+        flex-direction: column;
+    }
+}
+
+
+.div_login form  .btn_up {
+    margin-top: 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border:hidden;
+    background: #8a5082;
+    color: white;
+}
+
+
+.div_login .div_btns .btn_cancel {
+    background: transparent;
+    color:white;
+    padding-top: 10px;
+    font-size: 11pt;
+    cursor: default;
+}

@@ -1,0 +1,17 @@
+.list_cl {
+    float: left;
+    width: 87.8%;
+    margin-top: 3.7%;
+    margin-left: 12%;
+}
+
+.list_cl .title {
+    width: 100%;
+}
+
+
+.list_cl .tableHead tr th:last-child, .list_cl .tableData tr td:last-child {
+    float: left;
+    width: 500px;
+    text-align: left;
+}

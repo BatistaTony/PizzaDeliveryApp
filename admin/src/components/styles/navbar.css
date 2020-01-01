@@ -1,0 +1,145 @@
+
+
+
+
+@font-face {
+    font-family: Raleway-semibold;
+    src:url(./fonts/raleway/Raleway-SemiBold.ttf);
+}
+
+
+@font-face {
+    font-family: Raleway-Thin;
+    src:url(./fonts/raleway/Raleway-Thin.ttf);
+}
+
+
+
+@font-face {
+    font-family: Raleway-Light;
+    src:url(./fonts/raleway/Raleway-Light.ttf);
+}
+
+
+@font-face {
+    font-family: Raleway-Bold;
+    src:url(./fonts/raleway/Raleway-Bold.ttf);
+}
+.navbartop {
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color:white;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3)
+}
+
+.navbartop .logo {
+    font-size: 14pt;
+    margin-left:20px;
+    margin-top:10px;
+    float: left;
+    font-family: Raleway-semibold;
+}
+
+
+
+.btn_add {
+    margin-top:10px;
+    margin-right:2%;
+    border-radius:5px;
+    border:hidden;
+    width: 130px;
+    float: right;
+    height: 30px;
+    background:rgba(255, 145, 0, 0.945);
+    transition: 0.5s;
+}
+
+.btn_add:hover {
+    opacity: 0.7;
+}
+
+
+.btn_add span {
+    float: left;
+    margin-top:1px;
+    margin-left:10px;
+    color:white;
+    font-family: Raleway-semibold;
+}
+
+.btn_add img {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left:10px;
+}
+
+
+.navbarleft{ 
+    position: fixed;
+    float: left;
+    margin-top:3.5%;
+    width: 170px;
+    background:rgb(2, 63, 71);
+    height: 93.6vh
+}
+
+.navbarleft .menu {
+    width: 150px;
+    float: left;
+    margin-top:20%;
+
+}
+
+.menu .menu_list  {
+    list-style: none;
+}
+
+.menu_list li {
+    width: 160px;
+    padding-left: 10px;
+    height: 30px;
+    padding-top: 10px;
+    color:white;
+    font-size: 10pt;
+    font-family: Raleway-semibold;
+    transition: 0.5s;
+}
+
+.menu_list li:hover {
+    background:rgba(0,0,0,0.3);
+}
+
+a {
+    text-decoration: none;
+}
+
+.notif span, .entre span {
+    margin-left:10px;
+    width: 14px auto;
+    height: 3px;
+    font-size: 7pt;
+    background:rgba(255, 145, 0, 0.945);
+    padding: 4px;
+    border-radius:5px;
+}
+
+.menu_list li img {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-top: -1.2px;
+    padding-right: 10px;
+}
+
+.menu_list .act_item {
+    
+    border-left:4px solid rgba(255, 145, 0, 0.945);
+    background:rgba(0,0,0,0.3);
+    font-family: Raleway-Bold;
+    width: 156px;
+}
+

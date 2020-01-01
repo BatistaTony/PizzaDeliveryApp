@@ -1,0 +1,341 @@
+@font-face {
+    font-family: Raleway-semibold;
+    src:url(./fonts/raleway/Raleway-SemiBold.ttf);
+}
+
+.comida {
+    float: left;
+    width: 87.5%;
+}
+
+
+.comida .enc {
+    float: left;
+    width: 100%;
+    margin-top:4.5%;
+    margin-left: 14%;
+}
+
+.comida .enc .title {
+    width: 100%;
+}
+
+.comida .enc .tableData tr td {
+    width: 250px;
+}
+
+.comida .enc .tableData tr td:nth-child(4) {
+    width: 300px;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 10px; 
+    height: 25px;
+}
+
+.comida .tableData tr td:first-child {
+    width: 200px;
+    text-align: center;
+    padding-top: 10px;
+    height: 25px;
+}
+
+.comida tr th {
+    width: 250px;
+}
+
+
+.comida tr th:last-child{
+    float: left;
+
+}
+
+.comida tr th:first-child {
+    width: 189px;
+    padding-left: 10px;
+    text-align: left;
+} 
+
+
+.btn_food {
+    margin-top:10px;
+    margin-right:2%;
+    border-radius:5px;
+    border:hidden;
+    width: 70px;
+    float: right;
+    font-size: 9pt;
+    color:white;
+    font-family: Raleway-semibold; 
+    height: 20px;
+    background:rgba(255, 145, 0, 0.945);
+}
+
+.comida .viewFood {
+    /* margin-top:-4.9%;
+    margin-left:-12%; */
+    background: rgba(22, 22, 22, 0.9);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+
+.verfood {
+    margin-top:7%;
+    background: white;
+    border-radius: 5px;
+    width: 700px;
+    height: 390px;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.verfood .title {
+    width: 100%;
+    height: 30px;
+    float: left;
+    background:rgba(255, 145, 0, 0.945);
+    color: white;
+    font-family: Raleway-semibold;
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+.verfood .title h1 {
+    font-size: 14pt;
+    margin-left:10px;
+}
+
+.verfood .title button {
+    width: 40px;
+    height: 20px;
+    border:hidden;
+    margin-right:10px;
+    background:rgb(116, 14, 14);
+    color: white;
+    border-radius: 5px;
+    font-family: Raleway-semibold;
+}
+
+
+
+.verfood img {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.detalhes0 {
+    margin-left:20px;
+    display: flex;
+    flex-direction: column;
+    margin-left:10px;
+    width:90%;
+    font-family: Raleway-semibold;
+}
+
+.verfood .detalhes0 h3 {
+    font-size: 13pt;
+    margin-top:7px;
+    
+}
+
+.verfood .detalhes0 p {
+    font-size: 11pt;
+    margin-top:5px;
+    float: left;
+    padding: 10px;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    font-size: 10pt;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.6); 
+}
+
+.verfood .detalhes {
+    display: flex;
+    flex-direction: column;
+    margin-top:9px;
+    font-family: Raleway-semibold;
+   
+}
+
+.detalhes .precos_pizza {
+    float: left;
+    list-style: none;
+    font-size:12pt;
+    margin-top:10px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.detalhes .precos_pizza li {
+    padding:5px;
+    margin-top: 10px;
+    font-size: 10pt;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.6); 
+    border-radius: 10px;
+}
+
+.verfood .detalhes h1 {
+    font-size: 16pt;
+    margin-top:7px;
+    font-family: Raleway-semibold;
+}
+
+.verfood .opcoes {
+    display: flex;
+    margin-left:44%; 
+    flex-direction: row;
+    float: right;
+    position: absolute;
+    height: 100px;
+    margin-top:4.5%;
+    margin-right:10px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.verfood .opcoes button {
+    border-radius: 5px;
+    border:hidden;
+    margin-left:10px;
+    color:white;
+    z-index: 0;
+    background-color: transparent;
+}
+
+.verfood .opcoes button img {
+    width: 40px;
+    height: 35px;
+}
+
+
+.verfood .dialogRemove{
+    width: 300px;
+    height: 100px;
+    background:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+.dialogOverlay, .dialogOverlaysucess {
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    height: 49.1%;
+    width: 48.7%;
+    float: left;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+
+.dialogRemove h1 {
+    color:black;
+    font-size: 14pt;
+    font-family: Raleway-semibold;
+}
+
+
+.dialogRemove button {
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border:hidden;
+    margin-left:10px;
+    color:white;
+    background:green;
+}
+
+.dialogRemove button:nth-child(2){
+    background: red;
+}
+
+.edit_food {
+    display: flex;
+    margin-left: 0;
+}
+
+.edit_food_ {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    background-color: rgba(0,0,0,.7);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialogOverlaysucess {
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogOverlaysucess .modal_sucess1 {
+    display: flex;
+    float: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius:5px;
+    margin-top:4%;
+   
+}
+
+.modal_sucess1 h1 {
+    font-family: Raleway-semibold;
+    color:black;
+    font-size: 13pt;
+    
+
+}
+
+.overlay2 {
+    display: none;
+}
+
+.overlay2 .modal_sucess {
+    display: block;
+}
+
+.modal_sucess1 button {
+    margin-top:10px;
+    margin-right:2%;
+    border-radius:5px;
+    border:hidden;
+    width: 130px;
+    float: right;
+    height: 30px;
+    background:rgba(255, 145, 0, 0.945);
+    
+}
+

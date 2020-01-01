@@ -1,0 +1,104 @@
+.estab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:5%;
+    float: left;
+}
+
+.estab h1 {
+    margin-bottom: 3%;
+}
+
+.estab .galeria {
+    
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+}
+
+
+ .galeria li{
+
+    height: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+    
+}
+
+.galeria li.small{
+    flex-basis: 40%;
+}
+
+.galeria  li.large {
+    flex-basis: 50%;
+}
+
+@media (max-width:900px) {
+    
+    .galeria li.small, .galeria  li.large {
+        flex-basis: 100%;
+    }
+}
+
+
+.howwork {
+    background: url('/img/background.png') no-repeat;
+    background-size: cover;
+    width: 100%; 
+    margin-top: 2%;
+    margin-bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.howwork ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    border-radius: 20px;
+    padding: 2%;
+    width: 85%;
+    height:auto;
+    padding-bottom: 3%;
+    margin-top: 5%;
+    background: white;
+    margin-bottom: 3%;
+}
+
+@media (max-width: 900px)
+{
+    .howwork ul {
+        flex-wrap: wrap;
+    }
+}
+
+.howwork ul li {
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 2%;
+}
+
+
+
+
+.howwork ul li h1 {
+    font-size: 13pt;
+    margin-top: 10px;
+}
+
+.howwork ul li p {
+    font-size: 10pt;
+    margin-top: 10px;
+    text-align: justify;
+}

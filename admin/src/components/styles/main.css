@@ -1,0 +1,482 @@
+@font-face {
+    font-family: Raleway-semibold;
+    src:url(./fonts/raleway/Raleway-SemiBold.ttf);
+}
+
+
+@font-face {
+    font-family: Raleway-Thin;
+    src:url(./fonts/raleway/Raleway-Thin.ttf);
+}
+
+
+
+@font-face {
+    font-family: Raleway-Light;
+    src:url(./fonts/raleway/Raleway-Light.ttf);
+}
+
+
+@font-face {
+    font-family: Raleway-Bold;
+    src:url(./fonts/raleway/Raleway-Bold.ttf);
+}
+
+ .content-1 {
+     float: left;
+     width: 88%;
+     height: 93vh;
+     margin-top:3.5%;
+     margin-left:11.9%;
+ }
+
+ .content-1 .statist {
+     
+     height: 200px;
+     display: flex;
+     margin-top:1.5%;
+ }
+
+ .content-1 .statist .statist_des {
+     width: 270px;
+     height: 120px;
+     border-radius:5px;
+     background:rgba(255, 145, 0, 0.945);
+     margin-left:2.5%;
+ }
+
+ .content-1 .statist .statist_des  h1 {
+     font-size: 12pt;
+     font-family: Raleway-semibold;
+     padding-left: 10px;
+     padding-right: 10px;
+     margin-top:15px;
+     color:white;
+     height: 50px;
+ }
+
+ .content-1 .statist .statist_des img {
+     width: 50px;
+     height:45px;
+     margin-top:10px;
+     margin-left:10px;
+     float: right;
+     margin-right:10px;
+ }
+
+
+ .content-1 .statist .statist_des h3 {
+    font-size: 15pt;
+    float: left;
+    font-family: Raleway-semibold;
+    padding-left: 11px;
+    padding-right: 10px;
+    margin-top:12px;
+    color:white;
+ }
+
+ .content-1 .statist .statist_des:hover a {
+    display: block;
+ }
+
+ .content-1 .statist .statist_des a {
+    font-size: 9pt;
+    float: right;
+    font-family: Raleway-semibold;
+    padding-left: 11px;
+    padding-right: 20px;
+    margin-top:29px;
+    display: none;
+    color:white;
+ }
+
+ .content-1 .enc  {
+     margin-left: 10px;
+     width: 1175px;
+     height: 500px;
+     margin-top:-3%;
+     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+     float: left;
+ }
+
+ .reservas_1 {
+     display: flex;
+     margin-left:20px;
+ }
+
+ 
+ .enc .title{
+     width: 1175px;
+     height: 35px;
+     padding-top: 9px;
+     background:rgba(255, 145, 0, 0.945);
+     color:white;
+     font-family: Raleway-semibold;
+     font-size: 14pt;
+ }
+
+.enc .title img {
+     float: left;
+     padding-right: 10px;
+     width: 40px;
+     height: 40px;
+     margin-top:-9px;
+     margin-left:10px;
+ }
+
+ .enc .title  span {
+    color:gray;
+ }
+
+
+ .enc .tableHead{
+     width: 100%;
+     height: 40px;
+     border-collapse: collapse;
+     border-bottom: 1px solid #808080;
+ }
+
+ .tableHead tr th {
+    font-family: Raleway-Bold;
+    font-size: 11pt; 
+    float: left;
+     width: 100px;
+     height: 30px;
+     padding-top: 10px;
+ }
+
+ .tableHead tr th:nth-child(5), .tableData tr td:nth-child(5) {
+    width: 340px;
+    text-align: center;
+}
+
+ .tableHead tr th:last-child {
+     float: right;
+ }
+
+ .tableHead tr th:first-child {
+     width: 148px;
+     padding-left: 10px;
+     text-align: left;
+ }
+
+ .tableData {
+     margin-top: -1px;
+     float: left;
+     width: 100%;
+     border-collapse: collapse;
+     
+ }
+
+ .tableData tr {
+    border-collapse: collapse;
+    border-top:1px solid #a7a3a3;
+    height: 40px;   
+    transition: 0.5s;
+ }
+
+.tableData tr:nth-child(even) {
+    background-color: #f6f5f8;
+}
+
+ .tableData tr td {
+    float: left;
+    height: 25px;
+    padding-top: 10px;
+    width: 100px;
+    font-size: 10pt;
+    text-align: center;
+    font-family: Raleway-semibold;
+   
+ }
+
+ .enc .tableHead tr th:nth-child(4),  .enc .tableData tr td:nth-child(4){
+     width: 150px;
+ }
+
+ .tableData tr td:first-child {
+     width: 158px;
+     text-align: left;
+     padding-top: 10px;
+     height: 25px;
+ }
+
+ .tableData tr td:last-child {
+     float: right;
+ }
+
+ .tableData tr td img {
+     width: 23px;
+     margin-top:-4px;
+     float: left;
+     height: 23px;
+     margin-left: 10px;
+     margin-right:10px;
+     border-radius:100%;
+ }
+
+ .tableData tr:hover {
+     background: rgba(207, 204, 204, 0.3);
+ }
+
+ .tableData .status span {
+     padding: 4px;
+     width: 70px;
+     float: left;
+     color:white;
+     font-size: 8.5pt;
+     margin-top:-3px;   
+     margin-left:5px;
+     border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+
+ .content-1 .enc_mesa {
+     width: 510px;
+     margin-left:5%;
+ }
+
+ .content-1 .title_cont1 {
+     font-size:14pt;
+     color:gray;
+     margin-left: 2.5%;
+     margin-top: 3%;
+     font-family: Raleway-semibold;
+ }
+
+ .enc_mesa .tableData tr td{
+    width: 105px;
+    text-align: center;
+    padding-top: 10px;
+    height: 25px;
+}
+
+.enc_mesa .tableData .status span{
+    margin-left:18%;
+}
+
+.enc_mesa .title {
+    width: 510px;
+}
+
+.enc_mesa .tableHead tr th {
+    width: 105px;
+    text-align: center;
+    padding-top: 10px;
+    height: 25px;
+}
+
+ .enc_mesa .tableData tr td:first-child {
+    width: 80px;
+    text-align: center;
+    padding-top: 10px;
+    height: 25px;
+}
+
+.enc_mesa tr th:first-child {
+    width: 69px;
+    padding-left: 10px;
+    text-align: left;
+} 
+
+.semVendas {
+    
+    margin-top: 3.6%;
+    text-align: center;
+    width: 96.6%;
+    font-size: 13pt;
+    background: green;
+    color:white;
+    font-family: Raleway-semibold;
+    padding: 20px;
+    z-index: -8;
+    border:hidden;
+}
+
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    float: left;
+    background: rgba(12, 3, 3, 0.582);
+    display: none;
+}
+
+.overlay2 {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    float: left;
+    background: rgba(12, 3, 3, 0.582);
+}
+
+.overlay2, .modal_sucess {
+    display: none;
+}
+
+.modal_sucess {
+    float: left;
+    position: absolute;
+    margin-top:35vh;
+    margin-left:65vh;
+    width: 300px;
+    height: 100px;
+    background:white;
+    border-radius:5px;
+}
+
+.modal_sucess img {
+    margin-left:10px;
+    margin-top:10px;
+    width:40px;
+    height: 40px;
+    float: left;
+}
+
+.modal_sucess h1 {
+    color:black;
+    float: left;
+    width: 200px;
+    margin-left:10px;
+    margin-top:10px;
+    font-size: 12pt;
+    font-family: Raleway-semibold;
+}
+ 
+
+.add_food {
+    width: 660px;
+    background:white;
+    height: 550px;
+    margin-top:5%;
+    margin-left: 25%;
+    border-radius: 5px;
+    
+}
+
+#erroFood{
+    font-size:12pt;
+    width:200px;
+    display: block;
+    margin-top:19%;
+    color:red;
+    position: absolute;
+    margin-left: 10px;
+    float:left;
+}
+
+.title_Add_food {
+    margin-top:-5%;
+    float: right;
+    margin-right:40%;
+    font-family: Raleway-semibold;
+}
+
+.add_food .btn_food, .modal_sucess .btn_food {
+    margin-top:10px;
+    margin-right:2%;
+    border-radius:5px;
+    border:hidden;
+    width: 130px;
+    float: right;
+    height: 30px;
+    background:rgba(255, 145, 0, 0.945);
+    color:white;
+    font-family: Raleway-semibold;
+}
+
+#formAddfood {
+    float: left;
+    margin-left:5%;
+    margin-top:12%;
+    font-family: Raleway-semibold;          
+   
+}
+
+#formAddfood label {
+    margin-top:30px;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-left:-6%;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    font-family: Raleway-semibold;
+}
+
+.inputsForm {
+    float: left;
+    width: 650px;
+    height: 300px;
+    margin-left:-2%;
+    margin-top:2%;
+}
+
+
+.ipts {
+    margin-left:10px;
+    float: left;
+    width: 300px;
+    height: 80px;
+
+}
+
+
+
+#formAddfood h5 {
+    width: 300px;
+    float: left;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+
+#formAddfood input, select {
+    width: 250px;
+    height: 28px;
+    border-radius: 3px;
+    margin-left:10px;
+    margin-top:10px;
+    font-family: Raleway-semibold;
+    padding-left: 5px;
+}
+
+#formAddfood textarea {
+    padding-top: 5px;
+    padding-left: 5px;
+    width: 250px;
+    height: 100px;
+    margin-left:10px;
+    margin-top:10px;
+    border-radius: 3px;
+    font-family: Raleway-semibold;
+}
+
+.btns_add {
+    display: flex;
+    float: left;
+    margin-top:10%;
+    margin-left:49%;
+}
+
+.data_historia {
+    margin-top:3.7%;
+    margin-left: 12%;
+    width:87.7%;
+    float: left;
+}
+
+
+
+.data_historia .title_his{
+    font-size:15pt;
+    color:gray;
+    margin-bottom:2%;
+    margin-top:2%;
+    padding-left:10px;
+}
+
+
+

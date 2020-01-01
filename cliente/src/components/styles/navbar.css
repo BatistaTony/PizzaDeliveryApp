@@ -1,0 +1,164 @@
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    color:white;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.3)), url('/img/IMG_2923.jpg') no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+
+.navbar .logo {
+    margin-left:30px;
+    font-size: 10pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:700px){
+
+    .navbar {
+        padding-bottom: 4%;
+    }
+
+    .navbar .logo {
+        margin-bottom: 5%;
+    }
+}
+
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right:3%;
+    margin-top: 8px;
+}
+
+.menu li {
+    padding-top:3px;
+    padding-bottom: 5px;
+    padding-right:10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-left:10px;
+    text-align: center;
+    font-size: 10pt;
+    transition: 0.5s;
+    color:white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.act_item, .menu li:hover  {
+    background:rgba(255, 145, 0, 0.945);
+}
+
+
+.submenuEu {
+    float: left;
+    margin-top: 2px;
+    margin-left: -6%;
+    list-style: none;
+    display: none;
+    margin-right: 5%;
+    position: absolute;
+    background: rgb(238, 117, 117);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.submenuEu li {
+    width: 100px;
+    font-size: 10pt;
+    margin-right: 10px;
+}
+
+.eu {
+    width: 65px;
+}
+
+.eu:hover .submenuEu {
+    display: block;
+}
+
+
+
+@media  (max-width:700px) {
+    
+    .navbar {
+        flex-wrap: nowrap;
+        align-items: center;
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .logo {
+        margin-top:20px;
+        font-size: 9pt;
+    }
+
+    .menu {
+        margin-left:10%;
+    }
+
+   
+
+}
+
+.cart_button {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    float: right;
+    right: 0;
+    bottom: 0;
+    padding: 3%;
+
+}
+
+.cart_button button{
+    background: transparent;
+    border:hidden;
+}
+
+
+.legend_cart_btn {
+    margin-top: -25%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 9pt;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    background: rgb(238, 117, 117);
+    color: white;
+    position: absolute;
+}
+
+@media (max-width:700px){
+    .legend_cart_btn {
+        margin-top: -40%;
+        margin-left: 20%;
+    }
+}
+ 
