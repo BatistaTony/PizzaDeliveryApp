@@ -6,8 +6,9 @@ import Estabelecimento from './estabelecimento'
 import axios from 'axios'
 import Auth from './auth'
 import CartButton from './cart_button'
+import { connect } from 'react-redux'
 
-export default class Home extends React.Component {
+class Home extends React.Component {
 
     constructor(props){
 
@@ -85,13 +86,15 @@ export default class Home extends React.Component {
                 }
             }
         })
+
+
     }
 
      getPizzasNumber = () => {
 
-        if(Auth.islogged()){
+        if(this.props.state.User._id){
             
-            axios.get('/cart/getCart/'+Auth.showUser()).then((res)=>{
+            axios.get('/cart/getCart/'+this.props.state.User._id).then((res)=>{
 
             this.setState({numberofPizzas: res.data.cart.producto.length})
 
@@ -115,7 +118,7 @@ export default class Home extends React.Component {
 
                     {this.getPizzasNumber()}
                     
-                    {Auth.islogged() && this.state.numberofPizzas ?
+                    {this.props.state.User._id && this.state.numberofPizzas ?
                         
                         <CartButton pizzas={this.state.numberofPizzas} />:
                         null
@@ -231,3 +234,17 @@ export default class Home extends React.Component {
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        state
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        dispatch
+    }
+}
+
+export default  connect(mapStateToProps, mapDispatchToProps)(Home)

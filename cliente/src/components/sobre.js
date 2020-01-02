@@ -6,16 +6,18 @@ import './styles/sobre.css'
 import CartButton from './cart_button'
 import Auth from './auth'
 import axios from 'axios'
+import { useSelector } from 'react-redux'
 
 export default function Sobre(){
 
     const [number, setNumber] = useState('')
+    const user  = useSelector(state=>state.User)
 
     const getPizzasNumber = () => {
 
-        if(Auth.islogged()){
+        if(user){
             
-            axios.get('/cart/getCart/'+Auth.showUser()).then((res)=>{
+            axios.get('/cart/getCart/'+user._id).then((res)=>{
 
             setNumber(res.data.cart.producto.length)
 
@@ -31,7 +33,7 @@ export default function Sobre(){
 
                 {getPizzasNumber()}
                     
-                    {Auth.islogged() && number ?
+                    {user && number ?
                         
                         <CartButton pizzas={number} />:
                         null

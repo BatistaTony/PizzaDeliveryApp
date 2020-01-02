@@ -52,7 +52,7 @@ router.post('/register', async (req,res)=>{
         }else{
             try {
                 const savedCliente = await clienteObj.save()
-                res.json({id: savedCliente._id})
+                res.json({cliente: savedCliente})
             } catch (error) {
                 res.json({message: error})
             }
@@ -176,7 +176,7 @@ router.post('/login',  async (req,res)=>{
                 const validUser = await bcrypt.compare(cliente.senha, clienteEnc.senha)
 
                 if(validUser){
-                    res.json({id: clienteEnc._id})
+                    res.json({cliente: clienteEnc})
                 } else{
                     res.json({message: 'Utilizador não encontrado'})
                 }

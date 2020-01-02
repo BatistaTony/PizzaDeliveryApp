@@ -6,8 +6,9 @@ import Auth from './auth'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import $ from 'jquery'
+import { connect } from 'react-redux'
 
-export default class Carrinho extends React.Component{
+class Carrinho extends React.Component{
 
     constructor(props){
         super(props)
@@ -17,20 +18,20 @@ export default class Carrinho extends React.Component{
             idpizza: 0,
             total_cart: 0,
             frase: 'fghghfghfghfhf',
-            qtd_total: 0
+            qtd_total: 0,
+            id_user: this.props.state.User._id
         }
     }
 
 
     componentDidMount(){
 
-        if(Auth.islogged()){
+        if(this.state.id_user){
             
-            axios.get('/cart/getCart/'+Auth.showUser()).then((res)=>{
+            axios.get('/cart/getCart/'+this.state.id_user).then((res)=>{
 
                this.setState({carrinho: res.data.cart})
-               
-
+        
                this.calc_cart_total()
 
                this.state.carrinho.producto.map((pizza)=>{
@@ -40,7 +41,7 @@ export default class Carrinho extends React.Component{
                 
             }).catch((err)=>{
                 if(err.response){
-                   
+
                 }
             })
 
@@ -181,7 +182,7 @@ export default class Carrinho extends React.Component{
 
                 <div className="carrinho1">
                 
-                {Auth.islogged() ? 
+                {this.state.id_user ? 
                 
                 <div className="carrinho1_2">
 
@@ -317,3 +318,18 @@ export default class Carrinho extends React.Component{
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        state
+    }
+}
+
+
+const mapDispatchToProps = dispatch =>{
+    return {
+        dispatch
+    }
+}
+
+export default  connect(mapStateToProps, mapDispatchToProps)(Carrinho)

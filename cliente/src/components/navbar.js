@@ -1,46 +1,25 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './styles/navbar.css'
-import {Link, Redirect} from 'react-router-dom'
-import Auth from './auth'
-import axios from 'axios'
+import {Link} from 'react-router-dom'
+import { logout } from './store/actions'
+
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function Navbar(props){
 
-    const [nome, setNome] = useState('')
+    
+
+    const user = useSelector(state=>state.User)
+    const dispatch = useDispatch()
 
 
-    const showUser = ()=>{
-        axios.post('/cliente/getOne', {
-            "id": Auth.showUser()
-        }).then((res)=>{
-            if(res.data){
-                setNome(res.data.nome)
-            }else{
-                alert('Erro de conta')
-            }
-            
-        }).catch((err)=>{
-            if(err.response){
-             
-            }
-        })
-
-    }
-
-    const logout = () =>{
-
-         return (Auth.logout(()=>
-             <Redirect to='/login' />
-        ))
-        
-    }
+    const nome = user.nome
 
     
 
-
     const isLogged = () => {
 
-        if(Auth.islogged()){
+        if(user){
 
             return (
 
@@ -50,7 +29,7 @@ export default function Navbar(props){
                 
                             <ul className="submenuEu">
                                 <li>{nome}</li>
-                            <Link to="login"><li className="logout"  onClick={logout}>Sair</li></Link>
+                            <Link to="login"><li className="logout"  onClick={()=>dispatch(logout())}>Sair</li></Link>
                             </ul>                 
                     
                     </Link>:
@@ -60,7 +39,7 @@ export default function Navbar(props){
                     <ul className="submenuEu">
 
                             <li>{nome}</li>
-                            <li  className="logout" onClick={logout}>Sair</li>
+                            <li  className="logout" onClick={dispatch(logout())}>Sair</li>
                             </ul>
                  
                     </Link>
@@ -92,11 +71,6 @@ export default function Navbar(props){
 
     return (
         <div className="navbar">
-
-       
-            
-        
-        {showUser()}
 
             <div className="logo">
                 <img src="img/icones/icons8_kawaii_pizza_48px.png" alt="" />

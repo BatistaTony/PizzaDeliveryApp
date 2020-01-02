@@ -6,10 +6,14 @@ import Carrinho from './components/carrinho';
 import User from './components/user';
 import Sobre from './components/sobre';
 import Login from './components/login'
+import { Provider } from 'react-redux'
+import store from './components/store/index'
+
 
 function App() {
   return (
     
+    <Provider store={store}>
     <Router>
       <div className="App">
           <Route exact path="/" component={Home} />
@@ -19,6 +23,7 @@ function App() {
           <Route exact path="/login" component={Login} />
       </div>
     </Router>
+    </Provider>
   );
 }
 

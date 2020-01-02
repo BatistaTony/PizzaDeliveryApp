@@ -5,6 +5,8 @@ import Rodape from './rodape'
 import $ from 'jquery'
 import axios from 'axios'
 import Auth from './auth'
+import { connect } from 'react-redux'
+import { getUser } from './store/actions'
 
 const initialState = {   
 
@@ -29,8 +31,6 @@ class Login extends React.Component {
 
 
     componentDidMount(){
-
-        console.log(this.props)
         
         $('.cadastro_form').css({display:'none'})
 
@@ -74,13 +74,15 @@ class Login extends React.Component {
             endereco: this.state.endereco,
             senha: this.state.senha
         }).then((res)=>{
-            if(res.data.id){
-                Auth.login(res.data.id, ()=>{
-                    this.props.history.push('/user')
-                })
+            if(res.data.cliente){
+               
+                    this.props.history.push('/')
+                    this.props.dispatch(getUser(res.data.cliente))
+               
             }else{
                 this.setState({erro: res.data.message})
             }
+
         }).catch((err)=>{
             if(err.response.status === 500){
                 this.setState({erro:'Erro interno do servidor'})
@@ -99,16 +101,16 @@ class Login extends React.Component {
                 "telefone":this.state.telefone,
                 "senha":this.state.senha
         }).then((res)=>{
-            if(res.data.id){
-                    Auth.login(res.data.id, ()=>{
+            if(res.data.cliente){
                         this.props.history.push('/')
-                    })
+                        this.props.dispatch(getUser(res.data.cliente))          
             }else{
                     this.setState({erro: res.data.message})
             }
+
+            
             
         }).catch((err)=>{
-
             if(err.response.status === 500){
                 this.setState({erro:'Erro interno do servidor'})
             }else{
@@ -215,5 +217,17 @@ class Login extends React.Component {
 }
 
 
+const mapStateToProps = state =>{
+    return {
+        state
+    }
+}
 
-export default Login
+const mapDispatchToProps  = dispatch => {
+    return {
+        dispatch
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

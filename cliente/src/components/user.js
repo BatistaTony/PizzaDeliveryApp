@@ -7,8 +7,10 @@ import Auth  from './auth'
 import axios from 'axios'
 import {Redirect} from 'react-router-dom'
 import CartButton from './cart_button'
+import { connect } from 'react-redux'
 
-export default class User extends React.Component{
+
+class User extends React.Component{
 
     constructor(props){
 
@@ -31,9 +33,9 @@ export default class User extends React.Component{
 
     getPizzasNumber = () => {
 
-        if(Auth.islogged()){
+        if(this.props.state.User._id){
             
-            axios.get('/cart/getCart/'+Auth.showUser()).then((res)=>{
+            axios.get('/cart/getCart/'+this.props.state.User._id).then((res)=>{
 
             this.numberofpizzas =  res.data.cart.producto.length
 
@@ -67,7 +69,6 @@ export default class User extends React.Component{
 
     uploadPhoto = ()=>{
 
-        // this.setState({erro: 'Erro do ficheiro'})
 
         const fd = new FormData()
 
@@ -85,7 +86,7 @@ export default class User extends React.Component{
 
             if((this.state.file.size / 1000) < 1000 ){
 
-            axios.post('/cliente/uploadPhoto/'+Auth.showUser(), fd, config).then((res)=>{
+            axios.post('/cliente/uploadPhoto/'+this.props.state.user._id, fd, config).then((res)=>{
 
                     if(res.data.file.myimage === 'null'){
                         this.setState({erro: 'Imagem vazia'})
@@ -111,7 +112,7 @@ export default class User extends React.Component{
     receiveUser = () =>{
 
         axios.post('/cliente/getOne', {
-            "id":Auth.showUser()
+            "id":this.props.state.User._id
         }).then((res)=>{
 
             if(res.data){
@@ -138,6 +139,7 @@ export default class User extends React.Component{
             $('.perfil').css({display: 'none'})
             $('.div_edit').css({display: 'flex'})
         })
+
 
 
         $('.btn_cancel').on('click', ()=>{
@@ -220,13 +222,13 @@ export default class User extends React.Component{
         return(
             <div className="user">
                     
-                    {Auth.islogged() && this.numberofpizzas ?
+                    {this.props.state.User && this.numberofpizzas ?
                         
                         <CartButton pizzas={this.numberofpizzas} />:
                         null
                     }
 
-                {!Auth.islogged() ? <Redirect to='login' /> : null}
+                {!this.props.state.User ? <Redirect to='login' /> : null}
 
                     <Navbar item={'user'} />
 
@@ -335,3 +337,18 @@ export default class User extends React.Component{
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        state
+    }
+}
+
+
+const mapDispatchToProps = dispatch => {
+    return {
+        dispatch
+    }
+}
+
+export default  connect(mapStateToProps, mapDispatchToProps)(User)

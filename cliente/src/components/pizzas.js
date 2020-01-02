@@ -4,9 +4,10 @@ import axios from 'axios'
 import Auth from './auth'
 import $ from 'jquery'
 import {Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 
-export default class Pizzas extends React.Component{
+class Pizzas extends React.Component{
 
     constructor(props){
         super(props)
@@ -120,14 +121,14 @@ export default class Pizzas extends React.Component{
     add_tocart = (id)=>{
         
 
-        if(Auth.islogged()){
+        if(this.props.state.User ){
 
             $('.overlay_add_prod_sucess').css({display:'flex'})
             this.setState({frase: 'Pizza adicionada no carrinho'})
 
             axios.post('/cart/postCart', {
 
-                "userid":Auth.showUser(),
+                "userid":this.props.state.User._id,
                 "producto": {
                     
                             "pizza": {
@@ -189,7 +190,7 @@ export default class Pizzas extends React.Component{
 
         if(Auth.islogged()){
             
-            axios.get('/cart/getCart/'+Auth.showUser()).then((res)=>{
+            axios.get('/cart/getCart/'+this.props.state.User._id).then((res)=>{
 
             this.setState({numberofPizzas: res.data.cart.producto.length})
 
@@ -255,7 +256,7 @@ export default class Pizzas extends React.Component{
                     <div>
                     <button onClick={this.cancelar} className="add_pp" >Ok</button>
                     
-                    {!Auth.islogged()? 
+                    {!this.props.state.User._id? 
 
                         <Link to="/user"><button className="add_pp" >Criar conta</button></Link>
                         :null}
@@ -358,3 +359,18 @@ export default class Pizzas extends React.Component{
     )
         }
 }
+
+const mapStateToProps = state =>{
+    return {
+        state
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        dispatch
+    }
+}
+
+
+export default  connect(mapStateToProps, mapDispatchToProps)(Pizzas)
