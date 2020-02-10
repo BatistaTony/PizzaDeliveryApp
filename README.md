@@ -27,3 +27,6 @@ Está é a app feita com Reactjs, e Redux que o administrador controla as encome
 
 O Admin confirma as encomendas, poem elas à caminho, marca como entregada e faz os controles das vendas como também controla os utilizadores e adiciona as pizzas
 
+
+by Batista Tomé Oliveira
+

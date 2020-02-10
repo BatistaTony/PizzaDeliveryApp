@@ -23,6 +23,6 @@
   "scripts": {
     "start": "nodemon app.js"
   },
-  "author": "Batista",
+  "author": "Batista Tony",
   "license": "ISC"
 }
