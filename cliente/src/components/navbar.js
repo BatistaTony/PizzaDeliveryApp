@@ -39,7 +39,7 @@ export default function Navbar(props){
                     <ul className="submenuEu">
 
                             <li>{nome}</li>
-                            <li  className="logout" onClick={dispatch(logout())}>Sair</li>
+                            <li  className="logout" onClick={()=>dispatch(logout())}>Sair</li>
                             </ul>
                  
                     </Link>
