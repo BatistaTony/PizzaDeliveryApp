@@ -80,13 +80,12 @@ class User extends React.Component{
             }
         }
 
-        // console.log((this.state.file.size / 1000) < 1000 )
-
+    
         if(this.state.file.type === "image/jpeg" || this.state.file.type === "image/png"){
 
             if((this.state.file.size / 1000) < 1000 ){
 
-            axios.post('/cliente/uploadPhoto/'+this.props.state.user._id, fd, config).then((res)=>{
+            axios.post('/cliente/uploadPhoto/'+this.state._id, fd, config).then((res)=>{
 
                     if(res.data.file.myimage === 'null'){
                         this.setState({erro: 'Imagem vazia'})
@@ -117,7 +116,7 @@ class User extends React.Component{
 
             if(res.data){
 
-                this.setState(res.data)
+                this.setState(res.data) 
     
             }else{
                 alert('Erro de conta')

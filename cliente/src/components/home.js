@@ -138,8 +138,8 @@ class Home extends React.Component {
                         
                         
                         <div className="sabores">
-                        <h1>###################### ?</h1>
-                                <button className="btn_hero" onClick={this.searchBySabores}>##########</button>
+                        {/* <h1>###################### ?</h1> */}
+                                <button className="btn_hero" onClick={this.searchBySabores}>Começar a comprar agora</button>
                             </div>
                     </div>
 
