@@ -19,7 +19,7 @@ Está é a app que o cliente utiliza para fazer  os pedidos.
 
 Para fazer a encomenda o cliente cria uma conta na aplicação.
 
-IMG
+![image description](https://github.com/BatistaTony/PizzaDeliveryApp/blob/master/screeshoots/screencapture-localhost-3000-carrinho-2020-02-10-19_54_35.png)
 
 Depois adiciona os produtos no carrinho a quantidade que ele deseja.
 
@@ -44,16 +44,16 @@ O Admin pode abrir uma encomenda para o cliente adicionar novos productos
 
 # Painel do Administrador
 
-IMG
+![Image description](https://github.com/BatistaTony/PizzaDeliveryApp/blob/master/screeshoots/screencapture-localhost-3006-app-2020-02-10-20_37_01.png)
 
 
 # Encomendas
 
-IMG
+![Image description](https://github.com/BatistaTony/PizzaDeliveryApp/blob/master/screeshoots/screencapture-localhost-3006-encomenda-2020-02-10-20_36_49.png)
 
 # Historico das vendas
 
-IMG
+![Image description](https://github.com/BatistaTony/PizzaDeliveryApp/blob/master/screeshoots/screencapture-localhost-3006-historico-2020-02-10-19_55_32.png)
 
 
 
