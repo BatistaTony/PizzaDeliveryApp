@@ -1,5 +1,7 @@
 ### `Pizza Delivery App`
 
+
+
 Uma aplicação para encomenda de pizza e entrega ao domicilio, feita com a STACK MERN.
 Que pode ser utilizada para qualquer loja que faz encomenda de qualquer producto,a app no minimo precisará de pequenas alterações.
 
