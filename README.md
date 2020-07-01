@@ -84,8 +84,8 @@ E os dias restantes foram para Fazer o Layout resposnivo e Fluido
 
 # Quarta Semana
 
-Estava dificil trabalhar apenas com estado os estados locais da App e então decide adicionar o React para Globalizar os estados e assim
-conseguir fazer algumas melhorias e partilha de informação de um componente para o outro a partir de clicks.
+Estava dificil trabalhar apenas com estado os estados locais da App e então decide adicionar o Redux para Globalizar os estados e assim
+conseguir fazer algumas melhorias e partilha de informação de um componente para o outro a partir de clicks em componentes não ligados.
 Adicionei a consistencia de dados, armazendo o estado do Utilizador no LocalStore(Sei que não é uma boa ideia), visto que o utilizador logava, quando actualizava o Brwoser ele perdia o estado ou seja tinha que logar novamente.
 Adicionei outros: menus como Historico, Clientes, pois eu via que o Painel estava muito simples e com pouca informação.
 
